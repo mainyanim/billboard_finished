@@ -1,0 +1,172 @@
+{% load staticfiles %}
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <title>Bulletin Board</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="../static/css/index.css">
+     <link href="https://fonts.googleapis.com/css?family=Anton|Pinyon+Script|Poiret+One" rel="stylesheet">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+     <script src="../static/js/index.js"></script>
+     <script
+       src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYG IJLv2b8=" crossorigin="anonymous"></script>
+       <style>
+       .title-text {
+           font-family: 'Anton', sans-serif;
+           font-size: 40px;
+           color: black;
+           text-align: center;
+       }
+
+       .date-text {
+           font-family: 'Poiret One', cursive;
+           font-size: 16px;
+           color: black;
+       }
+
+       .post-title-text {
+           font-family: 'Anton', sans-serif;
+           font-size: 30px;
+           color: #00b7ef;
+       }
+
+       .post-text {
+           font-family: "Arial";
+           font-size: 16px;
+           color: #c1bfc0
+       }
+
+       .signature-text {
+           font-family: 'Pinyon Script', cursive;
+           font-size: 24px;
+           color: black;
+           text-align: right;
+       }
+
+       .post-box {
+         border-bottom: none;
+           height: auto;
+           max-width: 800px;
+           border: 3px solid #00b7ef;
+       }
+       legend.post-box{
+         width: auto;
+         padding: 0 10px;
+         border: none;
+         margin-bottom: 0px;
+       }
+       .font-cont{
+         text-align: center;
+         padding: 7px 0px 7px 0px
+       }
+
+       .post-new-cont{
+         border: 1px dashed #00b7ef;
+         max-width: 800px;
+       }
+
+       legend.post-new-cont{
+         width: auto;
+         padding: 0 10px;
+         border: none;
+         margin-bottom: 0px;
+       }
+       fieldset.post-new-cont{
+         margin-bottom: 10px;
+       }
+
+       .textblock{
+         height: 100px;
+         width: auto;
+       }
+
+       .author-input{
+         float: right;
+       }
+
+       .create-new-cont{
+         border: 1px dashed black;
+         max-width: 800px;
+       }
+
+       .fa{
+         font-size: 16px;
+         color: white;
+       }
+       .fa:hover{
+         cursor: pointer;
+       }
+
+       .btn{
+         width: 70px
+       }
+
+       .btn-times{
+         background-color: red;
+       }
+
+       .btn-add{
+         background-color: #66CDAA;
+       }
+
+       .no-posts-text{
+         font-family: "Arial";
+         font-size: 24px;
+         color: black;
+         text-align: center;
+       }
+
+       </style>
+   </head>
+   <body>
+     <h1 class="title-text">Billboard</h1>
+      <div>
+        <fieldset class="container post-box">
+          <legend class="date-text post-box">DATE</legend>
+          <div class="post-title-text">Post Title Here</div><br>
+          <div class="post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div><br>
+          <div class="signature-text">Signature</div>
+        </fieldset>
+      </div>
+<br>
+
+
+
+
+
+    <div>
+      <fieldset class="container post-new-cont">
+        <legend class="date-text post-new-cont">DATE</legend>
+      <input type="text" name="title" placeholder="Title"><br>
+      <br>
+      <textarea class="form-control" rows="8"></textarea>
+      <br> <br>
+      <input type="text" class="author-input" name="author" placeholder="Author">
+      <br>
+      <br>
+     </fieldset>
+     <div class="container create-new-cont font-cont col-md-12">
+      <div class = "btn btn-times">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="btn btn-add">
+        <i class="fa fa-check" aria-hidden="true"></i>
+      </div>
+     </div>
+   </div>
+   <br>
+
+   <div>
+     <div class="container no-posts-text">No Messages.. <br>Click the '+' to add a new post</div>
+     <div class="container create-new-cont">
+       <div class="cont font-cont">
+         <div class="btn btn-add">
+           <i class="fa fa-plus" aria-hidden="true"></i>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   </body>
+ </html>

@@ -1,0 +1,24 @@
+    {% extends 'billboard/base.html' %}
+    {% block content %}
+    {% if posts %}
+      {% for post in posts %}
+        <div>
+        <fieldset class="container post-box">
+          <legend class="date-text post-box">
+            {{ post.published_date|date:"d/m/y" }}
+          </legend>
+          <div class="post-title-text">{{ post.title }}</div><br>
+          <div class="post-text">{{ post.text|linebreaksbr }}</div><br>
+          <div class="signature-text">{{post.author}}</div>
+        </fieldset>
+      </div>
+      {% endfor %}
+      {%else%}
+      <div class="row">
+          <div class="col-md-12">
+            <h1 class = "hello-text">There's no posts yet...</h1>
+          </div>
+        </div>
+      {%endif%}
+      {% include "billboard/post_edit.html" %}
+  {% endblock %}

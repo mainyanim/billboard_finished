@@ -1,0 +1,27 @@
+{% load widget_tweaks %}
+{% block content %}
+<br>
+    <fieldset class="container post-new-cont" id = "form_comment">
+    <legend class="date-text post-new-cont">
+    {% now "d/m/y" %}
+   </legend>
+  <form method="POST" class="post-form">{% csrf_token %}
+{{ form.title|attr:"type:input"|attr:'placeholder:Title' }}
+<br />
+<br />
+{{ form.text|add_class:"form-control"|attr:"rows-8"}}
+<br />
+{{ form.author|add_class:"author-input"|attr:'placeholder:Author' }}
+<br />
+    </fieldset>
+        <div class="container create-new-cont font-cont" id = "buttons_container">
+          <button class = "btn btn-times" id = "close_form"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <button type="submit" class="btn btn-add" id = "add_comment"><i class="fa fa-check" aria-hidden="true"></i></button>
+        </div>
+    </form>
+    <div class="cont font-cont" id = "button_area">
+      <div class="btn btn-add" id = "new_comment">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+      </div>
+    </div>
+{% endblock %}

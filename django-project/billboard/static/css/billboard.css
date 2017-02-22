@@ -1,0 +1,109 @@
+.title-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+.hello-text{
+  text-align: center;
+}
+.date-text {
+    font-family: 'Poiret One', cursive;
+    font-size: 16px;
+    color: black;
+}
+
+.post-title-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    color: #00b7ef;
+}
+
+.post-text {
+    font-family: "Arial";
+    font-size: 16px;
+    color: #c1bfc0
+}
+
+.signature-text {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 24px;
+    color: black;
+    text-align: right;
+}
+.post-center {
+  vertical-align: center;
+}
+.post-box {
+  border-bottom: none;
+    height: auto;
+    max-width: 800px;
+    border: 3px solid #00b7ef;
+    vertical-align: center;
+}
+legend.post-box{
+  width: auto;
+  padding: 0 10px;
+  border: none;
+  margin-bottom: 0px;
+}
+.font-cont{
+  text-align: center;
+  padding: 7px 0px 7px 0px
+}
+
+.post-new-cont{
+  border: 1px dashed #00b7ef;
+  max-width: 800px;
+}
+
+legend.post-new-cont{
+  width: auto;
+  padding: 0 10px;
+  border: none;
+  margin-bottom: 0px;
+}
+fieldset.post-new-cont{
+  margin-bottom: 10px;
+}
+
+.textblock{
+  height: 100px;
+  width: auto;
+}
+
+.author-input{
+  float: right;
+}
+
+.create-new-cont{
+  border: 1px dashed black;
+  max-width: 800px;
+}
+
+.fa{
+  font-size: 16px;
+  color: white;
+}
+.fa:hover{
+  cursor: pointer;
+}
+
+.btn{
+  width: 70px
+}
+
+.btn-times{
+  background-color: red;
+}
+
+.btn-add{
+  background-color: #66CDAA;
+}
+
+.no-posts-text{
+  font-family: "Arial";
+  font-size: 24px;
+  color: black;
+  text-align: center;
+}
