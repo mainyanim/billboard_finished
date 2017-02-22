@@ -1,16 +1,23 @@
 {% extends "billboard/base.html" %}
-
 {% block content %}
-
+{% load widget_tweaks %}
 {% if form.errors %}
-
-<p>Let's register.</p>
-
+<h3 class = "hello-text">Please enter correct data.</h3>
+<br />
 {% endif %}
-
-<form method="post" action="">
+<form method="post" action="" class = "form-center">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Create new user account" />
+    <form method="POST" class="post-form">{% csrf_token %}
+    {{ form.username|attr:"type:input"|attr:'placeholder:Enter username' }}
+    <br />
+    <br />
+    {{ form.email|attr:"type:input"|attr:"rows-8"|attr:'placeholder:Enter email'}}
+    <br />
+    <br />
+    {{ form.password|attr:"type:input"|attr:'placeholder:Enter password' }}
+    <br />
+    <br />
+    <input type="submit" class = "btn btn-add" value="Create" />
 </form>
+</div>
 {%endblock%}

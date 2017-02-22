@@ -19,6 +19,9 @@
     color: #00b7ef;
 }
 
+.form-center {
+  text-align: center;
+}
 .post-text {
     font-family: "Arial";
     font-size: 16px;
