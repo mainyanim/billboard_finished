@@ -1,27 +1,26 @@
 {% extends "billboard/base.html" %}
-
+{% load widget_tweaks %}
 {% block content %}
-
 {% if form.errors %}
 
-<p>Your username and password didn't match. Please try again.</p>
+<h3 class = "hello-text">Your username and password didn't match. Please try again.</h3>
 
 {% endif %}
-
-<form method="post" action="{% url 'login' %}">{% csrf_token %}
-  <table>
-  <tr>
-    <td>{{form.username.label_tag}}</td>
-    <td>{{form.username}}</td>
-  </tr>
-  <tr>
-    <td>{{form.password.label_tag}}</td>
-    <td>{{form.password}}</td>
-  </tr>
-</table>
-<input type="submit" value = "login" />
-<input type="hidden" name="next" value="{{next}}"/>
+<br />
+<form method="post" action="" class = "form-center">
+    {% csrf_token %}
+    {{ form.username|attr:"type:input"|attr:'placeholder:Enter username' }}
+    <br />
+    <br />
+    {{ form.password|attr:"type:input"|attr:"rows-8"|attr:'placeholder:Enter password'}}
+    <br />
+    <br />
+    <input type="submit" class = "btn btn-add" value="Login" />
 </form>
-  <a href="{% url 'signup'%}" class = "top-menu"><span>Sign Up</span></a>
+<div class = "signup">
+  <a href="{% url 'signup'%}">
+    <button class = "btn btn-info"/>Sign Up</button>
+  </a>
+</div>
 
 {%endblock%}

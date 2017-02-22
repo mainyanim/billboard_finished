@@ -7,7 +7,6 @@
 {% endif %}
 <form method="post" action="" class = "form-center">
     {% csrf_token %}
-    <form method="POST" class="post-form">{% csrf_token %}
     {{ form.username|attr:"type:input"|attr:'placeholder:Enter username' }}
     <br />
     <br />

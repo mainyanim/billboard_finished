@@ -18,10 +18,12 @@
     font-size: 30px;
     color: #00b7ef;
 }
-
-.form-center {
+.signup {
   text-align: center;
 }
+.form-center {
+  text-align: center;
+  }
 .post-text {
     font-family: "Arial";
     font-size: 16px;
