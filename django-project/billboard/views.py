@@ -11,7 +11,7 @@ from .forms import UserForm
 from django.contrib.auth import login
 from django.http import HttpResponseRedirect
 # Create your views here.
-
+@login_required
 def index(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     if request.method == "POST":
@@ -21,6 +21,9 @@ def index(request):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
+            form = PostForm()
+            posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+            return render(request, 'billboard/index.html', {'posts': posts, 'form':form})
     else:
         form = PostForm()
     return render(request, 'billboard/index.html', {'posts': posts, 'form':form})
@@ -62,7 +65,6 @@ def signup(request):
         form = UserForm(request.POST)
         if form.is_valid():
             new_user = User.objects.create_user(**form.cleaned_data)
-            # redirect, or however you want to get to the main view
             return render(request, 'billboard/success.html')
     else:
         form = UserForm()
